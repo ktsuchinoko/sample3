@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang= "ja">
+    <head>
+        <title>試作品A</title>
+        <meta charset="utf-8">
+        <style>
+            .de4 {
+                display: inline;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <p class="de1">こんにちは</p>
+        <p class="de2">こんばんは</p>
+        <p class="de3">おはよう</p>
+        <p class="de4">さようなら</p>
+
+    <script>
+        $(function() {
+            $(".de1").css("color","red");
+        });
+
+        $(window).on("load",function() {
+            $(".de2").css("color", "blue");
+        });
+
+        $(".de3").click(function() {
+            $(this).text("クリックされました。");
+        });
+
+        $(function() {
+            $(".de4").mouseover(function(){
+                $(this).css("background", "green");
+            });
+
+            $(".de4").mouseout(function() {
+                $(this).css("background", "none");
+            });
+        });
+    </script>
+
+    </body>
+</html>
